@@ -16,6 +16,7 @@ const uri = `mongodb+srv://${process.env.SECRET_USER}:${process.env.SECRET_PASS}
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 async function run() {
     try {
+        console.log('mongo')
         await client.connect();
         const bookCollection = client.db('bookWarehouse').collection('books');
 
